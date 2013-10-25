@@ -1,17 +1,14 @@
 #include "NinjaBlockWiFly.h"
 
-#define DEBUG_SERIAL
+#undef DEBUG_SERIAL
+//#define DEBUG_SERIAL
 
 #ifdef DEBUG_SERIAL
 #define DPRINT(A) debugSerial->print(A)
 #define DPRINTLN(A) debugSerial->println(A)
-// #define DPRINT(A, B) debugSerial->print(A, B)
-// #define DPRINTLN(A, B) debugSerial->println(A, B)
 #else
 #define DPRINT(A)
 #define DPRINTLN(A)
-// #define DPRINT(A, B)
-// #define DPRINTLN(A, B)
 #endif
 
 #define ALLNOTNULL(A, B, C) ((A!=NULL) && (B!=NULL) && (C!=NULL))
